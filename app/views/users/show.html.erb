@@ -1,1 +1,6 @@
+<h2><%= @user.username %></h2>
 
+Commented On:
+  <% @user.posts.each do |post| %>
+    <%= link_to post.title, post_path(post.id) %>
+  <% end %>
